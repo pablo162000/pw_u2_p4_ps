@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/autoFormulario.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="formAuto">
+            <header>
+                <h1>Auto</h1>
+            </header>
+            <nav></nav>
+            <section>
+                <div id="myApp3">
+                    <form class="form" >
+                        <h2>Nuevo Auto</h2>
+
+                        <p type="Placa:"> <input v-model="placa" type="text" 
+                                placeholder="Ingrese su Placa"></p>
+                        <p type="Marca:"> <input v-model="marca" type="text" placeholder="Ingrese su Marca"></p>
+                        <p type="Modelo:"> <input v-model="modelo" type="text" placeholder="Ingrese su Modelo"></p>
+                        <p type="Kilometraje:"> <input v-model="kilometraje" type="text" placeholder="Ingrese su Kilometraje"></p>
+
+                        <button v-on:click.prevent="agregarAuto">Ingresar</button>
+                    </form>
+
+                    <h1>Lista Autos</h1>
+
+                    <ul >
+                        <li  v-for="({placa,marca,modelo,kilometraje},index) in miarreglo">
+                            <span>{{'Auto# ' + (index+1)}}</span>
+                            <blockquote>{{"placa: " + placa}}</blockquote>
+                            <blockquote>{{"marca: "+marca}}</blockquote>
+                            <blockquote>{{"modelo: "+ modelo}}</blockquote>
+                            <blockquote>{{"kilometraje: "+kilometraje}}</blockquote>
+
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        </section>
+        <footer></footer>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../js/autoFormulario.js"></script>
+
+
+
+</body>
+
+</html>
