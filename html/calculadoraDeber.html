@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/calculadoraDeber.css">
+    
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+    <nav>
+
+    </nav>
+
+    <section>
+        <div id="myApp4">
+
+            <div class="container">
+                <div></div>
+                
+                <label for=""><input v-model=entrada type="text"></label>
+                <div class="calculadora">
+                    
+                    
+
+                    <button v-on:click="agregarToLabel('1')">1</button>
+                    <button v-on:click="agregarToLabel('2')">2</button>
+                    <button v-on:click="agregarToLabel('3')">3</button>
+                    <button v-on:click="agregarToLabel('+')">+</button>
+
+                    <button v-on:click="agregarToLabel('4')">4</button>
+                    <button v-on:click="agregarToLabel('5')">5</button>
+                    <button v-on:click="agregarToLabel('6')">6</button>
+                    <button v-on:click="agregarToLabel('-')">-</button>
+
+                    <button v-on:click="agregarToLabel('7')">7</button>
+                    <button v-on:click="agregarToLabel('8')">8</button>
+                    <button v-on:click="agregarToLabel('9')">9</button>
+                    <button v-on:click="agregarToLabel('*')">*</button>
+
+                    <button v-on:click="agregarToLabel('0')" class="botonGrande">0</button>
+                    <button v-on:click="agregarToLabel('/')">/</button>
+                    <button v-on:click="calculo()">=</button>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer></footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../js/calculadoraDeber.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+.container {
+    /*El container para poder manipular los elementos 
+    que están adentro siempre le vamos a poner un display 
+    tipo flex, me permite manipular su ubicación de manera
+     mas sencilla*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.calculadora {
+    display: grid;
+    /*grid de 4 columnas y con un ancho de 75px*/
+    grid-template-columns: repeat(4, 75px);
+    /*para un numero especifico de filas*/
+    grid-template-rows: repeat(5,30px);
+    background-color: rgb(5, 61, 61);
+    padding: 20px;
+    border-radius: 35px;
+    box-shadow: 5px 2.5px 2.5px 2.5px black;
+
+}
+
+.botonGrande {
+
+    /*expande este elemento del tamano de 2 columnas del grid*/
+    grid-column: span 2;
+
+}
+button {
+    width: auto;
+    height: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top:2px ;
+    margin-bottom: 2px;
+
+    background-color: rgb(133, 227, 227);
+
+    
+
+    font-size: 20px;
+    border: 2px solid #000;
+    border-radius: 35px;
+
+}
+
+button:hover {
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 115);
+
+}
+
+.labelCalculadora {
+    border: 3px inset #000;
+    margin-bottom: 5px;
+    border-radius: 35px;
+    background: rgb(248, 250, 251);
+
+    grid-column: span 4;
+
+}
